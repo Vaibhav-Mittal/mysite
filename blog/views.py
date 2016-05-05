@@ -3,12 +3,7 @@ from .models import Blog, Category
 
 # Create your views here.
 def index(request):
-	return render_to_response('blog/index.html',
-	{
-		'categories':Category.objects.all(),
-		'posts':Blog.objects.all()[:5]
-	}
-	)
+	return render_to_response('blog/index.html',{})
 	
 def view_post(request, slug):
 	return render_to_response('blog/view_post.html',
